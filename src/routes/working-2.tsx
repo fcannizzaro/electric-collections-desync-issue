@@ -1,4 +1,3 @@
-import { settingsCollections } from "@/collections/settings";
 import { settingsCollections2 } from "@/collections/settings-2";
 import { SharedComponent } from "@/components/shared";
 import { useLiveQuery } from "@tanstack/react-db";
@@ -9,7 +8,7 @@ export const Route = createFileRoute("/working-2")({
   ssr: false,
   beforeLoad: () => {
     localStorage.setItem("debug", "*");
-    return settingsCollections.preload();
+    return settingsCollections2.preload();
   },
 });
 
